@@ -23,6 +23,13 @@ exchange_rate_data = pd.read_csv('USD_INR_Exchange_Rates_1980_2024.csv')
 
 exchange_rate_data.head()
 
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN1.png)
+
+
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN2.png)
+
+
+
 ## Merging the relevant parts of these datasets to analyze the impact of inflation on exchange rates
 
 # filter the inflation data for India and the United States
@@ -38,6 +45,9 @@ merged_df = pd.merge(exchange_rate_data, inflation_pivot_df, on='Year')
 merged_df.columns = ['Year', 'Exchange Rate (INR/USD)', 'Inflation Rate (India)', 'Inflation Rate (United States)']
 
 merged_df.head()
+
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN3.png)
+
 
 The merged dataset now contains the following columns for each year:
 
@@ -91,6 +101,9 @@ fig.update_yaxes(title_text="Inflation Rate (%)", row=3, col=1)
 
 fig.show()
 
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN4.png)
+
+
 The provided analysis suggests that the Indian Rupee has generally depreciated against the US Dollar over time. However, there have been periods of both rapid depreciation and relative stability.
 
 India's inflation rate has been more volatile, with periods of high inflation followed by more stable periods. In contrast, the US has generally experienced lower and more stable inflation rates.
@@ -103,6 +116,7 @@ correlation_matrix = merged_df[['Exchange Rate (INR/USD)','Inflation Rate (India
 
 correlation_matrix
 
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN5.png)
 
 
 ## Correlation Analysis Results
@@ -142,6 +156,9 @@ fig.update_layout(title='Comparative Analysis: Exchange Rate vs Inflation Rates 
                   width=1000)
 
 fig.show()
+
+![IN](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN6.png)
+
 
 Inflation and Exchange Rate Relationship:
 
@@ -194,6 +211,9 @@ fig.update_layout(title='Actual vs. Expected Exchange Rate (PPP)',
                   width=1000)
 
 fig.show()
+
+![in](https://github.com/Priyaah13/Inflation-Impact-Analysis-with-Python/blob/main/IN6.png)
+
 
 ## Summary:
 
