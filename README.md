@@ -103,6 +103,8 @@ correlation_matrix = merged_df[['Exchange Rate (INR/USD)','Inflation Rate (India
 
 correlation_matrix
 
+
+
 ## Correlation Analysis Results
 
 Exchange Rate vs. Inflation Rate (India): A weak negative correlation of -0.34 was found. This suggests that as India's inflation rate increases, the Indian Rupee tends to depreciate against the US Dollar.   
